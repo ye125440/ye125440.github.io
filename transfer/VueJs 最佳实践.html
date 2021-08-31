@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VueJs 最佳实践 | 桂伦铝&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="我的个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.495d9abf.css" as="style"><link rel="preload" href="/assets/js/app.e1fa9833.js" as="script"><link rel="preload" href="/assets/js/2.368db4b0.js" as="script"><link rel="preload" href="/assets/js/25.be0ada5c.js" as="script"><link rel="prefetch" href="/assets/js/10.115e08ae.js"><link rel="prefetch" href="/assets/js/11.80383d12.js"><link rel="prefetch" href="/assets/js/12.10d82eef.js"><link rel="prefetch" href="/assets/js/13.b402f7b8.js"><link rel="prefetch" href="/assets/js/14.cfdaf901.js"><link rel="prefetch" href="/assets/js/15.8080a36b.js"><link rel="prefetch" href="/assets/js/16.bd1099e6.js"><link rel="prefetch" href="/assets/js/17.972cd4bb.js"><link rel="prefetch" href="/assets/js/18.552c93b4.js"><link rel="prefetch" href="/assets/js/19.4967b00e.js"><link rel="prefetch" href="/assets/js/20.bdb245c2.js"><link rel="prefetch" href="/assets/js/21.25d975ec.js"><link rel="prefetch" href="/assets/js/22.5d97c0a2.js"><link rel="prefetch" href="/assets/js/23.668a7309.js"><link rel="prefetch" href="/assets/js/24.c87d91af.js"><link rel="prefetch" href="/assets/js/26.e2e11f12.js"><link rel="prefetch" href="/assets/js/27.f5760616.js"><link rel="prefetch" href="/assets/js/28.191b1ec5.js"><link rel="prefetch" href="/assets/js/29.fce60451.js"><link rel="prefetch" href="/assets/js/3.5508598a.js"><link rel="prefetch" href="/assets/js/30.288b3055.js"><link rel="prefetch" href="/assets/js/31.4e0f19c3.js"><link rel="prefetch" href="/assets/js/4.7e734d74.js"><link rel="prefetch" href="/assets/js/5.5d87f27c.js"><link rel="prefetch" href="/assets/js/6.6abfaa77.js"><link rel="prefetch" href="/assets/js/7.a46e560d.js"><link rel="prefetch" href="/assets/js/8.7efb8f8d.js"><link rel="prefetch" href="/assets/js/9.8c180547.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.495d9abf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">桂伦铝's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="投资" class="dropdown-title"><span class="title">投资</span> <span class="arrow down"></span></button> <button type="button" aria-label="投资" class="mobile-dropdown-title"><span class="title">投资</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/convertible-bond/" class="nav-link">
+  可转债
+</a></li><li class="dropdown-item"><!----> <a href="/hk-ipo/" class="nav-link">
+  港股打新
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/ye125440" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link">
+  NodeJs
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="投资" class="dropdown-title"><span class="title">投资</span> <span class="arrow down"></span></button> <button type="button" aria-label="投资" class="mobile-dropdown-title"><span class="title">投资</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/convertible-bond/" class="nav-link">
+  可转债
+</a></li><li class="dropdown-item"><!----> <a href="/hk-ipo/" class="nav-link">
+  港股打新
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/ye125440" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuejs-最佳实践"><a href="#vuejs-最佳实践" class="header-anchor">#</a> VueJs 最佳实践</h1> <p>原文地址：<a href="https://blog.usejournal.com/vue-js-best-practices-c5da8d7af48d" target="_blank" rel="noopener noreferrer">https://blog.usejournal.com/vue-js-best-practices-c5da8d7af48d<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>各位开发的小伙伴大家好！</p> <p>在 <a href="https://vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer">VueJs 文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>和网络上研究了一段时间后，我已经创建了一个最佳实践和风格指南的列表，以更正确或更普遍接受的方式使用 VueJs。</p> <p>以下几点与功能/优化有关，其他是 VueJs 命名约定和元素排序。更详细的信息可以在摘要中的链接中找到。</p> <h2 id="在组件销毁时通过-off-清除事件监听器"><a href="#在组件销毁时通过-off-清除事件监听器" class="header-anchor">#</a> 在组件销毁时通过 $off 清除事件监听器</h2> <p>当通过 <code>$on</code> 监听事件时，我们应该永远记住在 <code>destroyed()</code> 方法中通过 <code>$off</code> 删除监听者。这防止了我们内存泄漏。</p> <h2 id="事件名称始终使用短横线命名法"><a href="#事件名称始终使用短横线命名法" class="header-anchor">#</a> 事件名称始终使用短横线命名法</h2> <p>当发出/监听自定义事件时，我们应该总是使用短横线命名法。为什么呢？因为无论如何，这些事件都会自动转换成短横线命名。我们永远不会监听用驼峰或帕斯卡命名法命名的事件，因此，把事件名声明为和我们要监听它的方式一样：使用短横线命名法。</p> <div class="language- extra-class"><pre class="language-text"><code>// Emitting
+this.$emit('my-event') // instead of myEvent
+// Listening
+v-on:my-event
+</code></pre></div><h2 id="避免在-created-和-watch-中调用相同的方法"><a href="#避免在-created-和-watch-中调用相同的方法" class="header-anchor">#</a> 避免在 created 和 watch 中调用相同的方法</h2> <p>如果我们需要在组件初始化和属性更改时触发一种方法，通常的做法是这样做：</p> <div class="language- extra-class"><pre class="language-text"><code>watch: {
+  myProperty() {
+    this.doSomething();
+  }
+},
+created() {
+  this.doSomething();
+},
+methods: {
+  doSomething() {
+     console.log('doing something...');
+  }
+},
+</code></pre></div><p>尽管看起来不错，这里使用 <code>created ( )</code> 是多余的。我们可以将所有的功能都放在 <code>watch</code> 属性中，从而避免在 <code>created ( )</code> 中重复代码，并在组件实例化时触发它。例如：</p> <div class="language- extra-class"><pre class="language-text"><code>watch: {
+  myProperty: {
+    immediate: true, // forcing handler on initial status
+    handler() {
+      this.doSomething();
+    }
+  }
+},
+methods: {
+  doSomething() {
+     console.log('doing something...');
+  }
+},
+// Even better solution
+watch: {
+  myProperty: {
+    immediate: true, // forcing handler on initial status
+    handler() {
+      console.log('doing something...'); // No need to declare a function on methods for 1 use case
+    }
+  }
+},
+</code></pre></div><h2 id="在-v-for-循环中始终使用-key"><a href="#在-v-for-循环中始终使用-key" class="header-anchor">#</a> 在 v-for 循环中始终使用 :key</h2> <p>总是在模板循环中添加一个 : key 是一种常见的最佳做法。没有 : key 的 v-for 会导致很难找到错误，尤其是在动画中。</p> <h2 id="将-用于-mixins-属性"><a href="#将-用于-mixins-属性" class="header-anchor">#</a> 将$ _用于 mixins 属性</h2> <p>Mixins 是一种很好的方法，可以将重复的代码放入单个块中，并根据需要多次导入，但是(而且是一个很大的但是)，这可能会导致几个问题。在这里，我们将讨论重叠属性的问题。</p> <p>当我们将 mixin 导入我们的组件时，我们正在将 mixin 代码与我们的组件代码合并，现在，同名的属性怎么办？组件将永远占据上风，组件的属性具有更高的优先级。如果我想让我的 mixin 更有优先权呢？你不能分配优先级，但是你可以通过选择正确的<strong>命名约定</strong>来避免属性重叠甚至覆盖。</p> <p>为了区分 mixin 属性和组件属性，我们使用$ _。为什么是这些符号？有几个原因:</p> <ol><li>来自 VueJs 风格指南的约定</li> <li>_是为 Vue 的私有属性预留的</li> <li>$是为 Vue 的生态系统预留的</li></ol> <p>在 <a href="https://vuejs.org/v2/style-guide/#Private-property-names-essential" target="_blank" rel="noopener noreferrer">VueJs 风格指南<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中，你会发现他们建议添加mixin的名称，例如: <code>$_myMixin_updateUser</code>。</p> <p>我发现添加 mixin 名称会让可读性更容易混淆。但是这也取决于混入、情况和开发者。</p> <p>通过添加一个简单的 <code>$_</code>， 比如 <code>$_updateUser</code>，我发现代码可读性更强，可以轻松区分组件和 Mixin。</p> <h2 id="切勿在与-v-for-相同的元素上使用-v-if"><a href="#切勿在与-v-for-相同的元素上使用-v-if" class="header-anchor">#</a> 切勿在与 v-for 相同的元素上使用 v-if</h2> <p>这是一个性能杀手，列表越大，这种糟糕的做法会给性能带来越大的影响。</p> <p>让我们用代码来解释，想象下面的案例场景:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;ul&gt;
+  &lt;li
+    v-for=&quot;game in games&quot;
+    v-if=&quot;game.isActive&quot;
+    :key=&quot;game.slug&quot;
+  &gt;
+    {{ game.title }}
+  &lt;li&gt;
+&lt;/ul&gt;
+</code></pre></div><p>将按如下方式进行转换：</p> <div class="language- extra-class"><pre class="language-text"><code>this.games.map(function (game) {
+  if (game.isActive) {
+    return game.title
+  }
+})
+</code></pre></div><p>我们可以在这里看到，我们必须遍历整个 <code>games</code> 列表，不管 <code>game</code> 是否已经改变。</p> <p>在其他框架中，比如 Angular，这种情况就不会编译( <code>*ngIf</code> 不能在有 <code>*ngFor</code> 的同一元素中进行编译)。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e1fa9833.js" defer></script><script src="/assets/js/2.368db4b0.js" defer></script><script src="/assets/js/25.be0ada5c.js" defer></script>
+  </body>
+</html>
